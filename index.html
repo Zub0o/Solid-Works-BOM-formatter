@@ -5,13 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SW-BOM-v2</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <h1>Welcome to SW-BOM-v2</h1>
-    <button id="formatBtn">Format</button>
-    <br><br>
-    <input type="file" id="CsvInput" accept=".csv" style="display:none">
-    <button id="readCsvBtn">Read .csv File</button>
-    <script src="formatter.js"></script>
+    
+    <div id="fileInputs">
+        <div>
+            <h3 id="inputprompt">Read a file to format:</h3>  
+            <input type="file" id="CsvInput" accept=".csv" style="display:none">
+            <button id="readCsvBtn">Read .csv File</button>
+        </div>
+        <div>
+            <button id="formatBtn">Format</button>  
+        </div>        
+        <div>
+            
+        </div>
+          
+        
+    </div>
+
+   
+    
+    <div>
+        <table id="outputTable"></table>
+    </div>
 </body>
+
+<script src="formatter.js"></script>
+<script src="events.js"></script>
+
 </html>
