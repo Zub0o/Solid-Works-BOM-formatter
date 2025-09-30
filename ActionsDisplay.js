@@ -3,7 +3,7 @@ KONFIGHEADERS = ["Skiv typ/storlek","Konfig","Lager","Berarbetning"]
 
 document.getElementById('readCsvBtn').addEventListener('click', function() {
     document.getElementById('CsvInput').click();
-});
+}); 
 
 document.getElementById('CsvInput').addEventListener('change', function(event) {
     const file = event.target.files[0];
@@ -11,17 +11,65 @@ document.getElementById('CsvInput').addEventListener('change', function(event) {
         document.getElementById('inputprompt').innerText = 'Loaded file: ' + file.name;
         document.getElementById('readCsvBtn').disabled = true;
         
+        
         loadcsvfiles(file);
-
+        addworkinput();
+        
     };
 });
 
-
 document.getElementById('formatBtn').addEventListener('click', function() {
-    alert('Format button clicked!');
-    formatOutputData(CSVDATA);
+    formatData();
 });
 
+// Combines two or more arrays into an array of objects
+function combineArrays(headers,...arrays) {
+    const maxLength = Math.max(...arrays.map(arr => arr.length));
+    const combined = [];
+    for (let i = 0; i < maxLength; i++) {
+        const obj = {};
+        arrays.forEach((arr, arrIdx) => {
+            obj[headers[arrIdx]] = arr[i] !== undefined ? arr[i] : "";
+        });
+        combined.push(obj);
+    }
+    return combined;
+};
+
+function addworkinput(){
+    id = "work_jobb"
+    promptid = "materialchoice"
+    div = document.getElementById(id)
+
+    jobbfieldh3 = document.createElement('h3');
+    jobbfieldh3.innerText = "Jobb namn:"
+    jobbfieldh3.id = promptid
+
+
+    customerfieldh3 = document.createElement('h3');
+    customerfieldh3.innerText = "Kund namn:"
+    customerfieldh3.id = promptid
+
+
+    jobbfield = document.createElement('input');
+    jobbfield.type= "text"
+    jobbfield.placeholder = "Skriv Jobb namn..."
+    jobbfield.id = "jobbfield"
+
+    customerfield = document.createElement('input');
+    customerfield.type= "text"
+    customerfield.placeholder = "Skriv  kundnamn..."
+    customerfield.id = "customerfield"
+
+    
+    div.appendChild(jobbfieldh3)
+    div.appendChild(customerfieldh3)
+
+
+    div.appendChild(customerfield)
+    div.appendChild(jobbfield)
+
+};
 
 function displayCSVTable(csv,tableId) {
     // Accepts a list and displays as a table
@@ -44,19 +92,19 @@ function displayCSVTable(csv,tableId) {
 
 
 function getdropdownvalues(tableId,col) {
-    id = "select#"+tableId+"_dropdown_"+String(col);
+    id = "select#"+tableId + "_dropdown_" + String(col)
     const table = document.getElementById(tableId);
+
     const selects = table.querySelectorAll(id);
     const values = Array.from(selects).map(select => select.value);
-
+    return values
+ 
 };
 
 
 function displaymaterialTable(tableId) {
     findusedmaterials();
-    csv = CSVDATA;
 
-    // test = combineArrays(CHOICEHEADERS,MATERIALCHOICES);
     const table = document.getElementById(tableId);
     const tr = document.createElement('tr');
 
@@ -80,9 +128,6 @@ function displaymaterialTable(tableId) {
 
     for (let i=0; i<USEDMATERIALS.length; i++) {
         dropdownfieldrow(tableId,USEDMATERIALS[i],KONFIGOPTIONS,LAGEROPTIONS,BEARBETNINGOPTIONS);
-    
-    getdropdownvalues(tableId,0);
-    // getdropdownvalues('materialTable',0);
     };
 };
 
@@ -100,8 +145,8 @@ function dropdownfieldrow(tableId,material,...options) {
     createdropdown(tableId,tr,0,MATERIALCHOICES);
 
     // First col for material choices
-    for (let i = 0; i < options.length; i++) {
-        createdropdown(tableId,tr,i,options[i]);
+    for (let i = 1; i < options.length+1; i++) {
+        createdropdown(tableId,tr,i,options[i-1]);
     };
 
     table.appendChild(tr);
