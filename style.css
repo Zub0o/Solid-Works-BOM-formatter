@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     background: #4e4e4e;
@@ -18,7 +17,7 @@ h3 {
     padding-bottom: 20px;
 }
 
-h3#materialchoice{
+h3#materialchoice {
     font-size: 16px;
     padding-bottom: 2px;
     color: #000;
@@ -48,8 +47,6 @@ button:hover {
     background: #005fa3;
 }
 
-
-
 div#fileInputs {
     margin-left: 20%;
     width: 60%;
@@ -61,17 +58,16 @@ div#fileInputs {
 }
 
 table {
-    margin-left: 15%;
-    width: 70%;
+    margin-left: 10%;
+    width: 80%;
     font-size: 16px;
     text-align: left;
     border-radius: 20px;
     background-color: rgb(107, 103, 99);
-    margin-top:20px;
+    margin-top: 20px;
     border-spacing: 10px;
     column-width: auto;
 }
-
 
 table#outputTable {
     margin-left: 5%;
@@ -88,14 +84,14 @@ select {
     padding: 8px 12px;
     font-size: 16px;
 }
-select:hover{
+select:hover {
     background-color: #707070;
 }
 select:focus {
     outline: 2px solid #005fa3;
 }
 
-div#work_jobb{
+div#work_jobb {
     margin-left: 20%;
     width: 60%;
     background-color: rgb(107, 103, 99);
@@ -105,7 +101,6 @@ div#work_jobb{
     grid-template-columns: auto auto;
 }
 input {
-
     padding: 8px 12px;
     font-size: 16px;
     margin: 15px;
@@ -114,8 +109,7 @@ input {
     color: #fff;
     border: none;
     border-radius: 5px;
-    
 }
-input::placeholder{
+input::placeholder {
     color: rgb(180, 180, 180);
 }

@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SW-BOM-v2</title>
-    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SW-BOM-v2</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>SW-BOM-v2</h1>
 
-</head>
-<body>
-    <h1>SW-BOM-v2</h1>
-    
-    <div id="fileInputs">
-        <div id="div1">
-            <input type="file" id="CsvInput" accept=".csv" style="display:none">
-            <button id="readCsvBtn">Read .csv File</button>
-            <h3 id="inputprompt">Read a file to format...</h3>  
+        <div id="fileInputs">
+            <div id="div1">
+                <input
+                    type="file"
+                    id="CsvInput"
+                    accept=".csv"
+                    style="display: none"
+                />
+                <button id="readCsvBtn">Read .csv File</button>
+                <h3 id="inputprompt">Read a file to format...</h3>
+            </div>
+
+            <div id="div2">
+                <button id="formatBtn">Format</button>
+            </div>
         </div>
 
-        <div id="div2">
-            <button id="formatBtn">Format</button>
-        </div>        
+        <div id="work_jobb"></div>
 
-    </div>  
-
-    <div id="work_jobb">
-
-    </div>
-
-    <div>
-        <table id="materialTable"></table>
-        <table id="outputTable"></table>
-    </div>
-
-
-    
-</body>
-<script>src="SheetDBExport.csv"</script>
-<script src="ActionsDisplay.js"></script>
-<script src="CSVStuff.js"></script>
-<script src="Formatter.js"></script>
-
+        <div>
+            <table id="materialTable"></table>
+            <table id="outputTable"></table>
+        </div>
+    </body>
+    <script>
+        src = "SheetDBExport.csv";
+    </script>
+    <script src="ActionsDisplay.js"></script>
+    <script src="CSVStuff.js"></script>
+    <script src="Formatter.js"></script>
 </html>
