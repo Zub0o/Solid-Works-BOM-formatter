@@ -1,18 +1,18 @@
 ﻿SheetID;Material Namn;Material Tjocklek;Enhet;avkapad bit;Skivnamn;Skivbredd;Skivhöjd;Åder riktning;Antal;Noteringar
 Do not edit;Read only when editing sheets;Read only when editing sheets;Read only when editing sheets;Read only
 Leave blank for new sheets;;;;0=Full Sheet 1=Offcut;;;;X or Y or blank if no grain
-320;"Björk 2500 x 1250";18.5;mm;0;"Björk Faneerad 18.5";2500;1250;;100;""
 297;"Björk 2500 x 1250";18;mm;0;"Björk 18mm";2500;1250;;100;""
+320;"Björk 2500 x 1250";18.5;mm;0;"Björk Faneerad 18.5";2500;1250;;100;""
 302;"Björk 2500 x 1250";21;mm;0;"Björk 21mm";2500;1250;;100;""
 303;"Corian 3360x760";12;mm;0;"Corian 12mm";1830;760;;100;""
+314;"Gabon 3050 x 1530";6;mm;0;"Gabon 6mm";3050;1530;;100;""
 300;"Gabon 3050 x 1530";10;mm;0;"Gabon 10mm";3050;1530;;100;""
 298;"Gabon 3050 x 1530";12;mm;0;"Gabon 12mm";3050;1530;;100;""
 301;"Gabon 3050 x 1530";15;mm;0;"Gabon 15mm";3050;1530;;100;""
 304;"Gabon 3050 x 1530";18;mm;0;"Gabon 18mm";3050;1530;;100;""
-314;"Gabon 3050 x 1530";6;mm;0;"Gabon 6mm";2500;1250;;100;""
+321;"MDF 2400 x 1220";20;mm;0;"MDF 20mm";2500;1250;;100;""
 313;"Poppel 2500 x 1220";6;mm;0;"Poppel 6mm";2500;1250;;100;""
 308;"Tricoya 2400 x 1220";15;mm;0;"MDF";2400;1220;;100;""
-306;"Tricoya 2400 x 1220";21;mm;0;"Mdf luckor";2400;1220;;100;""
 319;"Ädel plywood 2500 x 1220";10;mm;0;"Ädel 10mm små";2500;1250;;100;""
 305;"Ädel plywood 2500 x 1220";13;mm;0;"Ädel 13 små";2500;1220;X;100;""
 309;"Ädel Plywood 3020 x 1500";13;mm;0;"Ädel 13mm mellan";3020;1500;;100;""
