@@ -79,11 +79,15 @@ function fetchCSVfile(url, sep = ";") {
     return fetch(url)
         .then((response) => response.text())
         .then((contents) => {
-            const rows = contents
-                .split(/\r?\n/)
-                .filter((row) => row.trim() !== "");
-            const list = rows.map((row) =>
-                row.split(sep).map((cell) => cell.trim()),
+
+            // Split the CSV content into rows and filter out empty rows
+            const rows = contents.split(/\r?\n/).filter((row) => row.trim() !== "");
+
+            // Split rows by separator and trim spaces, then remove surrounding quotes
+            const list = rows.map((row) => 
+                row.split(sep).map((cell) => 
+                    cell.trim().replace(/^"(.+)"$/, '$1')  // Remove leading and trailing quotes
+                )
             );
             return list;
         });
