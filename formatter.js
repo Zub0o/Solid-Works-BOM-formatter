@@ -76,9 +76,8 @@ function formatData() {
 
     const date = new Date().toISOString().substring(0, 10);
 
-    console.log(date);
+    newCSV.sort((a, b) => Number(a[7]) - Number(b[7]));
 
-    newCSV.sort();
     csvname = CUSTOMER + " " + JOBB + " " + date;
     writecsv(newCSV, csvname);
 }
